@@ -21,8 +21,22 @@ void insertionSort(vector<int>& A, int esq, int dir) {
     }
 }
 
+//Criação da função selectionSort
+void selectionSort(vector<int>& A, int esq, int dir) {
+    //Laço para iterar o vetor
+    for(int i = esq; i < dir - 1; i++){
+        int min_idx = i;    //criação do menor indice
 
+        //Laço aninhado para atualizar o valor do menor indice
+        for(int n = i + 1; n < dir; n++){            
+            if(A[n] < A[min_idx]){
+                A[min_idx] = A[n];
+            }
+        }
 
+        swap(A[i], A[min_idx])
+    }
+}
 
 
 
